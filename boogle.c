@@ -4,6 +4,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+// this code is made by hiyo with love
+// https://github.com/hiyokun-d
+
 // just for the easter egg (pls don't kill me)
 #include <unistd.h>
 // #include <windows.h>
@@ -92,6 +95,8 @@ void printAllWords(TrieNode *node, char *buffer, int depth)
               buffer[depth] = '\0';
               printf("[+100AURA] %s: %s\n", buffer, node->description);
        }
+       // this code is made by hiyo with love
+       // https://github.com/hiyokun-d
 
        for (int i = 0; i < 26; i++)
        {
@@ -102,7 +107,8 @@ void printAllWords(TrieNode *node, char *buffer, int depth)
               }
        }
 }
-
+// this code is made by hiyo with love
+// https://github.com/hiyokun-d
 void searchByPrefix(TrieNode *root, const char *prefix)
 {
        TrieNode *curr = root;
@@ -129,7 +135,8 @@ void searchByPrefix(TrieNode *root, const char *prefix)
        strcpy(buffer, prefix);
        printAllWords(curr, buffer, strlen(prefix));
 }
-
+// this code is made by hiyo with love
+// https://github.com/hiyokun-d
 void koboKan()
 {
        printf("                            :-:-:::     ::..:::::=                   "
@@ -160,7 +167,7 @@ void koboKan()
               "                                \n");
        printf("     *=+==*===-=-*+#=+=+=+-+==:-*:--:: .. .-=::==:...                "
               "                                \n");
-       printf("     ++=======:-=*=-=-=+==*+:-=-::::===-.. .==::-:....               "
+       printf("     ++===hiyo==:-=*=-=-=+==*+:-=-::::===-.. .==::-:....               "
               "                                \n");
        printf("    ++==++=====+=kobo-=+=+-==:= -:=.=..-.= .-==:::..::.              "
               "      ..                        \n");
@@ -168,7 +175,7 @@ void koboKan()
               "     .....                      \n");
        printf("    +====++++======++ -:+*:=:-::::::.:=..:. .::*=:=:.::..            "
               "  ........                      \n");
-       printf("    =============+.:::.:.:*:\%%##::::::.::::....#+==:=:=:::.    :.:. "
+       printf("    ======hiyo====+.:::.:.:*:\%%##::::::.::::....#+==:=:=:::.    :.:. "
               " :   ::... ::                     \n");
        printf("    ---=========\%% .  :.:*+==::::..::::::::.-===:::-.===::..:.....  "
               ":.:.::.....:..:  :.               \n");
@@ -177,6 +184,8 @@ void koboKan()
        printf("       "
               "=--=\%%\%%--::..:.:...:--=+::::---:::#=:**=+:--:=::=:-+=-:-:--::...:."
               ".  ....::..:::               \n");
+       // this code is made by hiyo with love
+       // https://github.com/hiyokun-d
        printf("         "
               "*=:==-==--::.:::..:=++++*::::===-#==*=+-=:--:::+=====-:-::..::::  "
               ".:-..:...::::::           \n");
@@ -257,7 +266,8 @@ void koboKan()
        printf("                                                                     "
               "                                \n");
 }
-
+// this code is made by hiyo with love
+// https://github.com/hiyokun-d
 void menu()
 {
        printf("\n");
@@ -291,7 +301,8 @@ void menu()
               printf("shhhh.... you can type 666, 420, and 69 too ifynkn\n");
               printf("-----------------------------------------------------\n\n");
        }
-
+       // this code is made by hiyo with love
+       // https://github.com/hiyokun-d
        printf("📜 MENU OPTIONS (still somehow readable):\n");
        printf("1. ✍️  Drop a new slang (Certified 🔥 only)\n");
        printf("2. 🔍 Find the lore of a slang (No mid allowed)\n");
@@ -301,12 +312,14 @@ void menu()
 
        printf("\n🧠 Choose your chaotic move [1–5] or perish: \n");
 }
-
+// this code is made by hiyo with love
+// https://github.com/hiyokun-d
 void freeTrie(TrieNode *root)
 {
        if (root == NULL)
               return;
-
+       // this code is made by hiyo with love
+       // https://github.com/hiyokun-d
        for (int i = 0; i < 26; i++)
        {
               if (root->children[i] != NULL)
@@ -314,7 +327,8 @@ void freeTrie(TrieNode *root)
                      freeTrie(root->children[i]);
               }
        }
-
+       // this code is made by hiyo with love
+       // https://github.com/hiyokun-d
        if (root->description != NULL)
        {
               free(root->description);
@@ -322,13 +336,16 @@ void freeTrie(TrieNode *root)
 
        free(root);
 }
+// this code is made by hiyo with love
+// https://github.com/hiyokun-d
 
 int main()
 {
        TrieNode *root = createNode();
        char word[100], description[256], prefix[100], buffer[100];
        int choice;
-
+       // this code is made by hiyo with love
+       // https://github.com/hiyokun-d
        printf("\n😤🔥 WELCOME TO BOOGLE — THE ULTIMATE SLANG HOARD 🧠💥\n");
        printf("🚨 WARNING: Entering a zone of certified brainrot...\n");
        printf("💬 Say less, type more. Let’s slang this thang.\n\n");
@@ -339,6 +356,8 @@ int main()
 
        do
        {
+              // this code is made by hiyo with love
+              // https://github.com/hiyokun-d
               menu();
               scanf("%d", &choice);
               getchar();
@@ -369,7 +388,8 @@ int main()
                             printf("✅ Slang '%s' has been added/updated!\n", word);
                      }
                      break;
-
+                     // this code is made by hiyo with love
+                     // https://github.com/hiyokun-d
               case 2:
                      printf("Enter slang word to search: ");
                      scanf("%s", word);
@@ -387,7 +407,8 @@ int main()
                      printf("All slang words (sorted):\n");
                      printAllWords(root, buffer, 0);
                      break;
-
+                     // this code is made by hiyo with love
+                     // https://github.com/hiyokun-d
               case 5:
                      printf("\n🧠💥 BRUH MOMENT ACTIVATED 💥🧠\n");
                      printf("You finna dip fr fr? No cap. W rizz detected.\n");
@@ -417,6 +438,8 @@ int main()
                      printf("🧙‍♂️ Wisdom: \"Every ‘sus’ has a ‘us’... stay "
                             "woke, "
                             "gamer.\"\n");
+                     // this code is made by hiyo with love
+                     // https://github.com/hiyokun-d
                      printf("🔥 Slang so potent it requires a syntax license.\n");
                      printf("🌐 Dialing into the deep web of vocabulary...\n");
                      printf("😶‍🌫️ Processing... gigabrain activity detected.\n");
@@ -459,7 +482,8 @@ int main()
        freeTrie(root);
        return 0;
 }
-
+// this code is made by hiyo with love
+// https://github.com/hiyokun-d
 /* TEST CASE - SOURCE: my lil friend GPT
    insert(root, "sus", "suspicious behavior");
   insert(root, "yeet", "to throw something forcefully");
